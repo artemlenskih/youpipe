@@ -2,5 +2,9 @@ django
 gunicorn
 dj-database-url
 djangorestframework
-psycopg2-binary
 django-cors-headers
+djangorestframework-simplejwt
+psycopg2-binary
+asgiref
+sqlparse
+packaging
