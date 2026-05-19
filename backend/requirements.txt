@@ -1,3 +1,4 @@
-django
 gunicorn
+django
 dj-database-url
+djangorestframework
