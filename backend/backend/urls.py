@@ -1,12 +1,10 @@
-from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.shortcuts import redirect
+from django.views.generic import RedirectView
 
 urlpatterns = [
-    #path('', lambda request: redirect('admin/')),
-    path('admin/', admin.site.get_admin_urls() if hasattr(admin, 'get_admin_urls') else admin.site.urls),
+    path('', RedirectView.as_view(url='/api/', permanent=False)),
     path('api/', include('api.urls')),
 ]
 if settings.DEBUG:
