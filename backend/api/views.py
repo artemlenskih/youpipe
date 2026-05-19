@@ -6,14 +6,16 @@ from django.contrib.auth.models import User
 from rest_framework import generics, status, permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Video, ChatMessage
 from .serializers import RegisterSerializer, VideoSerializer, ChatMessageSerializer
 
+@method_decorator(csrf_exempt, name='dispatch')
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = (permissions.AllowAny,)
-    serializer_class = RegisterSerializer
+    serializer_class = RegisterSerialize
 
 
 class VideoListCreateView(generics.ListCreateAPIView):
