@@ -16,7 +16,7 @@ from .serializers import RegisterSerializer, VideoSerializer, ChatMessageSeriali
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = (permissions.AllowAny,)
-    serializer_class = RegisterSerialize
+    serializer_class = RegisterSerializer
 
 
 class VideoListCreateView(generics.ListCreateAPIView):
