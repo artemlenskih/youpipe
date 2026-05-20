@@ -19,7 +19,7 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
 
-  const API_URL = 'http://127.0.0.1:8000/api';
+  const API_URL = 'https://youpipe.onrender.com/api';
 
   const [uploadTitle, setUploadTitle] = useState('');
   const [uploadDescription, setUploadDescription] = useState('');
